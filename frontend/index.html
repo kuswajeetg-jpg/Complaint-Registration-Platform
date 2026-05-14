@@ -3,25 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-  <title>Complaint Registration Platform</title>
-
+  <title>Home - Complaint Registration Platform</title>
+  <meta name="description" content="View all submitted complaints on our modern platform.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<script src="script.js"></script>
 <body>
-  <h1>Complaint Registration Platform</h1>
 
-  <p>Welcome to our complaint registration app.</p>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">ComplaintPortal</a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="add-complaint.html">Add Complaint</a>
+      </div>
+    </div>
+  </nav>
 
-  <nav>
-  <a href="index.html">Home</a>
-  |
-  <a href="add-complaint.html">Add Complaint</a>
-</nav>
-<main>
-  <h2>All Complaints</h2>
-  <div id="complaintsList"></div>
-</main>
+  <main class="main-content">
+    <h1 class="page-title">Registered Complaints</h1>
+    <div id="complaintsList" class="complaints-grid">
+      <!-- Complaints will be loaded here dynamically -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Complaint Registration Platform. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
