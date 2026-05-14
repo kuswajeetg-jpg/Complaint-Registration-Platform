@@ -28,3 +28,26 @@ if (complaintForm) {
     complaintForm.reset();
   });
 }
+const complaintsList = document.getElementById("complaintsList");
+
+if (complaintsList) {
+  const complaints = JSON.parse(localStorage.getItem("complaints")) || [];
+
+  if (complaints.length === 0) {
+    complaintsList.innerHTML = "<p>No complaints found.</p>";
+  } else {
+    complaints.forEach(function (item) {
+      const complaintCard = document.createElement("div");
+      complaintCard.className = "complaint-card";
+
+      complaintCard.innerHTML = `
+        <h3>${item.name}</h3>
+        <p><strong>City:</strong> ${item.city}</p>
+        <p><strong>Mobile:</strong> ${item.mobile}</p>
+        <p><strong>Complaint:</strong> ${item.complaint}</p>
+      `;
+
+      complaintsList.appendChild(complaintCard);
+    });
+  }
+}

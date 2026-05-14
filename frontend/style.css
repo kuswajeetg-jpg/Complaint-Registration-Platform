@@ -41,3 +41,10 @@ button {
   padding: 10px 16px;
   cursor: pointer;
 }
+.complaint-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
