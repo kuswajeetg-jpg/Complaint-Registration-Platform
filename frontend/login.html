@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Complaint Registration Platform</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">GovPortal</a>
+      <div class="nav-links" id="navLinks">
+        <!-- Dynamically injected -->
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="title-container">
+      <h1 class="page-title">Secure Login</h1>
+    </div>
+
+    <div class="form-container">
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required placeholder="Enter your password">
+        </div>
+        <button type="submit">Log In</button>
+      </form>
+      
+      <div class="auth-links">
+        Don't have an account? <a href="signup.html">Sign Up</a>
+      </div>
+
+      <div class="test-creds">
+        <h4>Testing Credentials</h4>
+        <p><strong>Customer Login:</strong><br>customer@test.com / customer123</p>
+        <p><strong>Employee Login:</strong><br>employee@test.com / employee123</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 National Grievance Portal. For public service.</p>
+  </footer>
+
+</body>
+</html>

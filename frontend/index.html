@@ -4,31 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Complaint Registration Platform</title>
-  <meta name="description" content="View all submitted complaints on our modern platform.">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="script.js" defer></script>
 </head>
 <body>
 
   <nav class="navbar">
     <div class="nav-container">
-      <a href="index.html" class="nav-logo">ComplaintPortal</a>
-      <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="add-complaint.html">Add Complaint</a>
+      <a href="index.html" class="nav-logo">GovPortal</a>
+      <div class="nav-links" id="navLinks">
+        <!-- Dynamically injected based on auth -->
       </div>
     </div>
   </nav>
 
   <main class="main-content">
-    <h1 class="page-title">Registered Complaints</h1>
-    <div id="complaintsList" class="complaints-grid">
-      <!-- Complaints will be loaded here dynamically -->
+    <div class="hero">
+      <h2>National Public Grievance Portal</h2>
+      <p>A unified platform for citizens to register, track, and resolve their complaints efficiently. Our government service team is committed to addressing your issues promptly.</p>
+      
+      <div class="hero-actions" id="heroActions">
+        <!-- Dynamically injected based on auth -->
+      </div>
+    </div>
+    
+    <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 3rem; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 250px; text-align: center; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid var(--border-color);">
+        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">1. Register</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Create an account securely to submit your grievances with complete details.</p>
+      </div>
+      <div style="flex: 1; min-width: 250px; text-align: center; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid var(--border-color);">
+        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">2. Track</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Monitor the real-time status of your complaint on your personalized dashboard.</p>
+      </div>
+      <div style="flex: 1; min-width: 250px; text-align: center; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid var(--border-color);">
+        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">3. Resolve</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Receive official responses and updates directly from the concerned authorities.</p>
+      </div>
     </div>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2026 Complaint Registration Platform. All rights reserved.</p>
+    <p>&copy; 2026 National Grievance Portal. For public service.</p>
   </footer>
 
 </body>

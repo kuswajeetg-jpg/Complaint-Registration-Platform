@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Dashboard - Complaint Registration Platform</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">GovPortal Staff</a>
+      <div class="nav-links" id="navLinks">
+        <!-- Dynamically injected -->
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="title-container">
+      <h1 class="page-title">Employee Dashboard</h1>
+    </div>
+
+    <div style="margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: flex-end; gap: 1rem;">
+      <label for="statusFilter" style="margin-bottom: 0;">Filter by Status:</label>
+      <select id="statusFilter" style="width: auto; padding: 0.5rem;">
+        <option value="all">All</option>
+        <option value="pending">Pending</option>
+        <option value="in_progress">In Progress</option>
+        <option value="resolved">Resolved</option>
+        <option value="rejected">Rejected</option>
+      </select>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Citizen Details</th>
+            <th>Complaint</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="allComplaintsTableBody">
+          <!-- Loaded dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 National Grievance Portal. For public service.</p>
+  </footer>
+
+</body>
+</html>

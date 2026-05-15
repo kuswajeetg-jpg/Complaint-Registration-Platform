@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add Complaint - Complaint Registration Platform</title>
+  <title>Sign Up - Complaint Registration Platform</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="script.js" defer></script>
@@ -21,32 +21,33 @@
 
   <main class="main-content">
     <div class="title-container">
-      <h1 class="page-title">Register New Complaint</h1>
+      <h1 class="page-title">Create an Account</h1>
     </div>
 
     <div class="form-container">
-      <form id="complaintForm">
+      <form id="signupForm">
         <div class="form-group">
-          <label for="name">Complainant Name</label>
-          <input type="text" id="name" name="name" required placeholder="Enter your name">
-        </div>
-        <div class="form-group">
-          <label for="city">City / District</label>
-          <input type="text" id="city" name="city" required placeholder="Enter your city">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
         </div>
         <div class="form-group">
-          <label for="mobile">Mobile Number</label>
-          <input type="tel" id="mobile" name="mobile" required placeholder="Enter 10-digit mobile number">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email">
         </div>
         <div class="form-group">
-          <label for="complaint">Complaint Details</label>
-          <textarea id="complaint" name="complaint" rows="5" required placeholder="Describe your grievance in detail..."></textarea>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required placeholder="Create a password">
         </div>
-        <div style="display: flex; gap: 1rem;">
-          <button type="submit">Submit Complaint</button>
-          <button type="reset" class="secondary-btn">Reset</button>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password">
         </div>
+        <button type="submit">Sign Up</button>
       </form>
+      
+      <div class="auth-links">
+        Already have an account? <a href="login.html">Log In</a>
+      </div>
     </div>
   </main>
 
